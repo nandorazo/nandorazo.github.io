@@ -17,12 +17,17 @@ body{
 
 header {
     grid-area: header;
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 10%;
     padding-right: 10%;
     background-color: rgba(217,221,241,.83);
+}
+
+
+.old_school_mob{
+    display: none;
 }
 .old_school a{
     filter:grayscale(100%);
@@ -192,6 +197,7 @@ a:active { text-decoration: none; }
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
 .old_school{
     color: black;
 }
@@ -302,6 +308,9 @@ a:active { text-decoration: none; }
 .houses-cell_text {
     padding: 5px;
     font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.5;
 }
 
 #about {
@@ -331,6 +340,8 @@ a:active { text-decoration: none; }
 #about_txt {
     max-width: 45%;
     font-size: max(3vh);
+    letter-spacing: .05em;
+    line-height: 1.5;
 }
 
 #about_me img{
@@ -430,11 +441,37 @@ footer img{
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 100px 300px 1500px 800px 700px 130px;
+        grid-template-rows: 80px 100px 300px 1600px 1000px 700px 130px;
         grid-template-areas: "header header" "nav nav" "profile profile" "Faves Faves" " about about" "contact contact" "footer footer";
         max-height: 100%;
     }
+    .emoji {
+        display: none;
+    }
 
+    .old_school{
+        text-align: end;
+        line-height: 1.5;
+        display: none;
+    }
+    .old_school_mob{
+        display: inline-flex;
+        flex-direction: column;
+        text-align: end;
+        line-height: 1.5;
+    }
+
+    .socialM {
+        display: flex;
+        flex-direction: column;
+        max-height: 75%;
+        line-height: 1.5;
+    }
+
+    .old_school_mob a{
+        color: black;
+        text-decoration: underline;
+    }
 
     .profile{
         background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,.4)), url("https://www.dropbox.com/s/5d4dlatysyxq29j/background.jpg?raw=1");
@@ -489,6 +526,8 @@ footer img{
         justify-content: center;
         color: rgba(31,83,160,1);
         text-shadow: 1px 1px black;
+        font-size: 40px;
+        padding-top: 15px;
     }
     
     .Faves heading p {
@@ -510,7 +549,7 @@ footer img{
     
     .houses-cell {
         box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
-        max-width: 200px;
+        max-width: 170px;
         max-height: 300px;
         flex-wrap: wrap;
         margin: 10px;
@@ -527,16 +566,19 @@ footer img{
     .houses-cell_text {
         padding: 5px;
         font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 1px;
     }    
 
     #about {
         grid-area: about;
         display: grid;
         max-height: 100%;
+        margin-top: 10px;
         justify-self: flex-end;
         grid-template-rows: 80px 1fr;
         object-fit: contain;
-        background:linear-gradient(to top,rgba(217,221,241,.5), rgba(217,221,241,0.1));
+        background:linear-gradient(to bottom,rgba(217,221,241,.5), rgba(217,221,241,0.1));
     }
     
     #about heading {
@@ -547,6 +589,7 @@ footer img{
         color: rgba(31,83,160,1);
         text-shadow: 1px 1px black;
         max-height: 60px;
+        font-size: 20px;
     }
     
     #about_me {
@@ -567,6 +610,7 @@ footer img{
         align-content:flex-start;
         margin: 5px;
         margin-left: 10px;
+        text-align: center;
     }
     
     #about_me img{
@@ -578,6 +622,9 @@ footer img{
         margin-bottom: 5px;
     }
 
+    #contact h1{
+        font-size: 40px;
+    }
 
     #contact iframe {
         grid-row: 4/5;
@@ -625,7 +672,8 @@ footer img{
         grid-row: 1/2;
         grid-column: 2/3;
         font-size: 16px;
-        justify-self: center;
+        justify-self: end;
+        text-align: end;
     }
 
     footer socialM{
