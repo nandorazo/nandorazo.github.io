@@ -11,7 +11,7 @@ body{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 100px 600px 26% 20% 30% 80px;
+    grid-template-rows: 80px 100px 600px 1100px 700px 700px 100px;
     grid-template-areas: "header header" "nav nav" "profile profile" "Faves Faves" " about about" "contact contact" "footer footer";
 }
 
@@ -291,11 +291,50 @@ a:active { text-decoration: none; }
 
 .houses-cell {
     box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
-    max-width: 200px;
-    max-width: 200px;
+    width: 25%;
     flex-wrap: wrap;
     margin: 10px;
     background-color: white;
+}
+
+#house1{
+    transition-property: width;
+    transition-duration: 400ms;
+}
+#house1:hover{
+    width: 27%;
+}
+
+#house2{
+    transition-property: width;
+    transition-duration: 400ms;
+}
+#house2:hover{
+    width: 27%;
+}
+
+#house3{
+    transition-property: width;
+    transition-duration: 400ms;
+}
+#house3:hover{
+    width: 27%;
+}
+
+#house4{
+    transition-property: width;
+    transition-duration: 400ms;
+}
+#house4:hover{
+    width: 27%;
+}
+
+#house5{
+    transition-property: width;
+    transition-duration: 400ms;
+}
+#house5:hover{
+    width: 27%;
 }
 
 .houses-cell img {
@@ -307,7 +346,7 @@ a:active { text-decoration: none; }
 
 .houses-cell_text {
     padding: 5px;
-    font-size: 14px;
+    font-size: 18px;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     line-height: 1.5;
@@ -441,7 +480,7 @@ footer img{
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 100px 300px 1600px 1000px 700px 130px;
+        grid-template-rows: 80px 100px 300px 2050px 1000px 700px 130px;
         grid-template-areas: "header header" "nav nav" "profile profile" "Faves Faves" " about about" "contact contact" "footer footer";
         max-height: 100%;
     }
@@ -549,8 +588,8 @@ footer img{
     
     .houses-cell {
         box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
-        max-width: 170px;
-        max-height: 300px;
+        width: 70%;
+        height: 350px;
         flex-wrap: wrap;
         margin: 10px;
         background-color: white;
@@ -565,10 +604,50 @@ footer img{
     
     .houses-cell_text {
         padding: 5px;
-        font-size: 14px;
+        font-size: 17px;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 1px;
     }    
+
+    #house1{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house1:hover{
+        width: 75%;
+    }
+    
+    #house2{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house2:hover{
+        width: 75%;
+    }
+    
+    #house3{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house3:hover{
+        width: 75%;
+    }
+    
+    #house4{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house4:hover{
+        width: 75%;
+    }
+    
+    #house5{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house5:hover{
+        width: 75%;
+    }
 
     #about {
         grid-area: about;
