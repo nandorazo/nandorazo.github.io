@@ -317,7 +317,7 @@ a:active { text-decoration: none; }
     grid-area: about;
     display: grid;
     grid-template-rows: 80px 1fr;
-    background:linear-gradient(to top,rgba(217,221,241,.5), rgba(217,221,241,0.1));
+    background:linear-gradient(to bottom,rgba(217,221,241,.5), rgba(217,221,241,0.1));
 }
 
 #about heading {
