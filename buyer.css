@@ -5,13 +5,11 @@
     font-family: Helvetica;
 }
 
-
-
 body{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 100px 600px 1100px 700px 550px 100px;
+    grid-template-rows: 80px 100px 750px 1100px 700px 550px 100px;
     grid-template-areas: "header header" "nav nav" "profile profile" "Faves Faves" " about about" "contact contact" "footer footer";
 }
 
@@ -107,6 +105,7 @@ a:active { text-decoration: none; }
 }
 
 @media screen and (max-width: 768px) {
+    
     .nav-container{
         position: relative;
     }
@@ -395,7 +394,7 @@ footer img{
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 100px 550px 2050px 1000px 550px 130px;
+        grid-template-rows: 80px 100px 810px 2050px 1000px 550px 130px;
         grid-template-areas: "header header" "nav nav" "profile profile" "Faves Faves" " about about" "contact contact" "footer footer";
         max-height: 100%;
     }
