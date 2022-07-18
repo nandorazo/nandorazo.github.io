@@ -201,7 +201,7 @@ a:active { text-decoration: none; }
     color: black;
 }
 .profile{
-    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,.4)), url("https://www.dropbox.com/s/5d4dlatysyxq29j/background.jpg?raw=1");
+    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,.4)), url("https://www.dropbox.com/s/nn90f16insiubfw/background.webp?raw=1");
     background-position: 50% 30%;
     background-size: 100%;
     grid-area: profile;
