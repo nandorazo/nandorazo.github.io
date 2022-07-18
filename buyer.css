@@ -606,15 +606,3 @@ footer img{
         grid-column: 2/3;
     }
 }
-
-@media (prefers-color-scheme) {
-    header {
-        grid-area: header;
-        display: inline-flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 10%;
-        padding-right: 10%;
-        background: rgba(114, 36, 36, 0.83);
-    }
-}
