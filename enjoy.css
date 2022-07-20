@@ -9,8 +9,9 @@ body {
 position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 700px 900px 700px 100px;
-    background: linear-gradient(to top, rgba(217,221,241,1), rgba(217,221,241,.1)) ;
+    grid-template-rows: 80px 750px 900px 700px 100px;
+    /*background: linear-gradient(to top, rgba(217,221,241,1), rgba(217,221,241,.1)) ;*/
+    background: whitesmoke;
     grid-template-areas: "header header" "profile profile" "Faves Faves" "about about" "footer footer";
 }
 
@@ -25,7 +26,7 @@ header{
     grid-area: profile;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 15% 60% 10% 15%;
+    grid-template-rows: 20% 26.6% 26.6% 26.6%;
     height: 100%;
     width: auto;
     overflow: hidden;
@@ -76,7 +77,7 @@ textarea {
 
 button {
     width: 75%;
-    background: rgba(10, 9, 10, .8);
+    background: rgba(0,135, 162, .5);
     color:rgba(255, 255, 255, .9);
     border-radius: 5px;
     height: 50px;
@@ -93,7 +94,7 @@ button {
 }
 
 #title {
-    font-size: 3em;
+    font-size: 2em;
     text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
     0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
     , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
@@ -101,48 +102,70 @@ button {
     color: white;
 }
 #place {
-    color: red;
+    color: rgba(0, 135, 162, 1);
     text-align: center;
-    font-size: 3em;
-    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    font-size: 2em;
 }
 
-.Cont {
+.restaurants {
     display: flex;
     grid-row: 2/3;
     grid-column: 1/2;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 1em;
-    flex-direction: column;
-    width: 90%;
-    list-style: circle;
-    margin-left: 30px;
-    line-height: 1.5;
-    letter-spacing: 1.5px;
+    object-fit: contain;
+    font-size: 3em;
+    color:white;
+    background:rgba(0,135, 162, .5);
+    text-align: center;
+}
+.restaurants p {
+    padding-top: 30px;
 }
 
-.hook {
+.restaurants img {
+    border-radius: 4px;
+}
+
+.coffee {
     grid-row: 3/4;
     grid-column: 1/2;
     display: flex;
     text-align: center;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    letter-spacing: 1px;
-    line-height: 1.5;
-
+    justify-content: space-between;
+    font-size: 3em;
+    color: rgba(0, 135, 162, 1);
+    text-align: center;
+}
+.coffee img {
+    height: 100%;
 }
 
-#call {
+.coffee p {
+    padding-top: 20px;
+}
+
+.Running {
+    display: flex;
     grid-row: 4/5;
     grid-column: 1/2;
     padding-left: 25px;
     text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    line-height: 1.5;
-    letter-spacing: 1.2px;
+    background:rgba(0,135, 162, .5);
+    color: white;
+    font-size: 3em;
+}
+
+.Running p {
+    padding-top: 20px;
+}
+
+.Running img{
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    display: flex;
 }
 
 .Faves{
@@ -152,7 +175,7 @@ button {
     display: grid;
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: 100px 1fr 1fr;
-    background:linear-gradient(to bottom,rgba(217,221,241,1), rgba(217,221,241,0.1));
+    background:whitesmoke;
 }
 
 .Faves heading {
@@ -165,12 +188,22 @@ button {
     padding-top: 5px;
     width: 100%;
 }
-.Faves heading h1 {
+.Faves heading {
     display: flex;
     justify-content: center;
     text-justify: center;
-    color: rgba(31,83,160,1);
-    text-shadow: 1px 1px black;
+}
+
+#trend {
+    color: white;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
+    0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+#NF {
+    color: rgba(0, 135, 162, 1);
 }
 
 .Faves heading p {
@@ -251,9 +284,10 @@ footer {
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 1150px 2050px 600px 130px;
+        grid-template-rows: 80px 1430px 2050px 600px 130px;
         grid-template-areas: "header header" "survey survey"  "Faves Faves" " about about" "footer footer";
         max-height: 100%;
+        background: whitesmoke
     }
 
     header{
@@ -273,22 +307,13 @@ footer {
         padding-bottom: 50px;
     }
     .top {
-        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 20px;
     }
-
-    .Cont {
-        margin-top: 25px;
-        line-height: 1.75rem;
-    }
-
-    .hook {
-        margin-top: 20px;
-    }
-
-    .Call  {
-        margin-top: 15px;
-    }
-
+    
     form input {
         margin-bottom: 10px;
     }
@@ -297,13 +322,97 @@ footer {
         margin-bottom: 10px;
     }
 
+    #title {
+        font-size: 2em;
+        text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
+        0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+        , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+        , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+        color: white;
+    }
+    #place {
+        color: rgba(0, 135, 162, 1);
+        text-align: center;
+        font-size: 2em;
+    }
+    
+    .restaurants {
+        display: flex;
+        flex-direction: column;
+        grid-row: 2/3;
+        grid-column: 1/2;
+        justify-content: space-between;
+        font-size: 1em;
+        height: 300px;
+        object-fit: contain;
+        font-size: 3em;
+        color:white;
+        background:rgba(0,135, 162, .5);
+        text-align: center;
+    }
+    .restaurants p {
+        padding-top: 10px;
+    }
+    
+    .restaurants img {
+        border-radius: 6px;
+        height: 60%;
+        width: 60%;
+        padding-bottom: 5px;
+    }
+    
+    .coffee {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 3em;
+        color: rgba(0, 135, 162, 1);
+        text-align: center;
+    }
+    .coffee img {
+        height: 60%;
+        width: 60%;
+        border-radius: 6px;
+    }
+    
+    .coffee p {
+        padding-top: 20px;
+    }
+    
+    .Running {
+        display: flex;
+        flex-direction: column;
+        grid-row: 4/5;
+        grid-column: 1/2;
+        padding-left: 25px;
+        text-align: center;
+        background:rgba(0,135, 162, .5);
+        color: white;
+        font-size: 3em;
+    }
+    
+    .Running p {
+        padding-top: 20px;
+    }
+    
+    .Running img{
+        height: 70%;
+        width: 70%;
+        object-fit: contain;
+        border-radius: 4px;
+        display: flex;
+    }
+
     .Faves{
         grid-area: Faves;
         max-height: 100%;
         display: grid;
         grid-template-columns: repeat(5, 20%);
         grid-template-rows: 160px 1fr;
-        background:linear-gradient(to bottom,rgba(217,221,241,.5), rgba(217,221,241,0.1));
     }
     
     .Faves heading {
@@ -311,17 +420,10 @@ footer {
         grid-column: 1/span 5;
         display: flex;
         flex-direction: column;
-        justify-self: center;
+        justify-content: space-between;
         padding-top: 5px;
         text-align: center;
-    }
-    .Faves heading h1 {
-        display: flex;
-        justify-content: center;
-        color: rgba(31,83,160,1);
-        text-shadow: 1px 1px black;
-        font-size: 40px;
-        padding-top: 15px;
+        font-size: 1.4em;
     }
     
     .Faves heading p {
