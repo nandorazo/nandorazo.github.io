@@ -10,7 +10,7 @@ position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 80px 800px 900px 700px 100px;
-    background: linear-gradient(to top, rgba(217,221,241,1), rgba(217,221,241,.1)) ;
+    background: whitesmoke;
     grid-template-areas: "header header" "profile profile" "Faves Faves" "about about" "footer footer";
 }
 
@@ -42,6 +42,12 @@ form {
 }
 form h1 {
     text-align: center;
+    /*
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
+    0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    color: white;*/
 }
 
 form input, label {
@@ -49,6 +55,16 @@ form input, label {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25em;
+}
+
+form h1 {
+    font-size: 1.6em;
+}
+
+form p {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    font-size: 1.3em;
 }
 
 form input {
@@ -155,7 +171,6 @@ button {
     display: grid;
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: 100px 1fr 1fr;
-    background:linear-gradient(to bottom,rgba(217,221,241,1), rgba(217,221,241,0.1));
 }
 
 .Faves heading {
@@ -168,7 +183,7 @@ button {
     padding-top: 5px;
     width: 100%;
 }
-.Faves heading h1 {
+/*.Faves heading h1 {
     display: flex;
     justify-content: center;
     text-justify: center;
@@ -181,6 +196,22 @@ button {
     display: flex;
     justify-self: center;
     justify-content: center;
+}*/
+
+#MR {
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
+    0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    color: white;
+    font-size: 3.5em;
+}
+
+#suc {
+    color: red;
+    font-size: 3.5em;
+    
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
 }
 
 .Faves section{
@@ -254,7 +285,7 @@ footer {
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 1200px 2050px 600px 100px;
+        grid-template-rows: 80px 1250px 2050px 600px 100px;
         grid-template-areas: "header header" "survey survey"  "Faves Faves" " about about" "footer footer";
         max-height: 100%;
     }
@@ -306,7 +337,6 @@ footer {
         display: grid;
         grid-template-columns: repeat(5, 20%);
         grid-template-rows: 160px 1fr;
-        background:linear-gradient(to bottom,rgba(217,221,241,.5), rgba(217,221,241,0.1));
     }
     
     .Faves heading {
