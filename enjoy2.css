@@ -1,0 +1,539 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Helvetica;
+}
+
+body {
+position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 900px 750px 700px 100px;
+    /*background: linear-gradient(to top, rgba(217,221,241,1), rgba(217,221,241,.1)) ;*/
+    background: whitesmoke;
+    grid-template-areas: "header header" "Faves Faves" "profile profile" "about about" "footer footer";
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    background: white;
+}
+
+.survey {
+    grid-area: profile;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 26.6% 26.6% 26.6%;
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+form {
+    grid-row: 1/span 4;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.RF {
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
+    0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    color: white;
+    letter-spacing: 1.5px;
+    font-size: 1.2em;
+}
+
+.DH {
+    color:rgba(0, 135, 162, 1);
+    letter-spacing: 1.5px;
+    font-size: 1.2em;
+}
+
+
+form input, label {
+    width: 75%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25em;
+}
+
+form input {
+    margin-bottom: 30px;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+input::placeholder{
+    text-align: center;
+    font-size: .75em;
+}
+
+.ctype {
+    width: 75%;
+    display: flex;
+    margin-bottom: 10px;
+    font-size: .75em;
+}
+
+textarea {
+    width: 75%;
+    height: 25%;
+    margin-bottom: 30px;
+}
+
+button {
+    width: 75%;
+    background: rgba(0,135, 162, .5);
+    color:rgba(255, 255, 255, .9);
+    border-radius: 5px;
+    height: 50px;
+    font-size: 1.25em;
+}
+
+.top {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#title {
+    font-size: 2em;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
+    0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    color: white;
+}
+#place {
+    color: rgba(0, 135, 162, 1);
+    text-align: center;
+    font-size: 2em;
+}
+
+.restaurants {
+    display: flex;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    justify-content: space-between;
+    font-size: 1em;
+    object-fit: contain;
+    font-size: 3em;
+    color:white;
+    background:rgba(0,135, 162, .5);
+    text-align: center;
+}
+.restaurants p {
+    padding-top: 30px;
+}
+
+.restaurants img {
+    border-radius: 4px;
+}
+
+.coffee {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 3em;
+    color: rgba(0, 135, 162, 1);
+    text-align: center;
+}
+.coffee img {
+    height: 100%;
+}
+
+.coffee p {
+    padding-top: 20px;
+}
+
+.Running {
+    display: flex;
+    grid-row: 4/5;
+    grid-column: 1/2;
+    padding-left: 25px;
+    text-align: center;
+    background:rgba(0,135, 162, .5);
+    color: white;
+    font-size: 3em;
+}
+
+.Running p {
+    padding-top: 20px;
+}
+
+.Running img{
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    display: flex;
+}
+
+.Faves{
+    grid-area: Faves;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 100px 1fr 1fr;
+    background:whitesmoke;
+}
+
+.Faves heading {
+    grid-row: 1/2;
+    grid-column: 1/span 5;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    padding-top: 5px;
+    width: 100%;
+}
+.Faves heading {
+    display: flex;
+    justify-content: center;
+    text-justify: center;
+}
+
+#trend {
+    color: white;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
+    0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+#NF {
+    color: rgba(0, 135, 162, 1);
+}
+
+.Faves heading p {
+    color: black;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}
+
+.Faves section{
+    grid-row: 2/3;
+    grid-column: 1/ span 5;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    object-fit: contain;
+}
+
+.houses-cell {
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
+    width: 25%;
+    margin: 10px;
+    background-color: white;
+}
+
+.houses-cell img {
+    display: flex;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.houses-cell_text {
+    padding: 5px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.contract{
+    grid-area: about;
+    background: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contract form { 
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+footer {
+    grid-area: footer;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 768px){
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        font-family: Helvetica;
+    }
+    body{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 2050px 1450px 600px 130px;
+        grid-template-areas: "header header" "Faves Faves" "survey survey" " about about" "footer footer";
+        max-height: 100%;
+        background: whitesmoke
+    }
+
+    header{
+        grid-area: header;
+        display: flex;
+        justify-content: center;
+        background: white;
+        width: 100%;
+    }
+
+    .survey {
+        grid-area: survey;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    .top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+    form input {
+        margin-bottom: 10px;
+    }
+
+    form textarea {
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin-bottom: 20px;
+    }
+
+    .RF {
+        font-size: 1.5em;
+    }
+
+    .DH {
+        font-size: 1.5em;
+    }
+
+    #title {
+        font-size: 2em;
+        text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
+        0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+        , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+        , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+        color: white;
+    }
+    #place {
+        color: rgba(0, 135, 162, 1);
+        text-align: center;
+        font-size: 2em;
+    }
+    
+    .restaurants {
+        display: flex;
+        flex-direction: column;
+        grid-row: 2/3;
+        grid-column: 1/2;
+        justify-content: space-between;
+        font-size: 1em;
+        height: 300px;
+        object-fit: contain;
+        font-size: 3em;
+        color:white;
+        background:rgba(0,135, 162, .5);
+        text-align: center;
+    }
+    .restaurants p {
+        padding-top: 10px;
+    }
+    
+    .restaurants img {
+        border-radius: 6px;
+        height: 60%;
+        width: 60%;
+        padding-bottom: 5px;
+    }
+    
+    .coffee {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 3em;
+        color: rgba(0, 135, 162, 1);
+        text-align: center;
+    }
+    .coffee img {
+        height: 60%;
+        width: 60%;
+        border-radius: 6px;
+    }
+    
+    .coffee p {
+        padding-top: 20px;
+    }
+    
+    .Running {
+        display: flex;
+        flex-direction: column;
+        grid-row: 4/5;
+        grid-column: 1/2;
+        padding-left: 25px;
+        text-align: center;
+        background:rgba(0,135, 162, .5);
+        color: white;
+        font-size: 3em;
+    }
+    
+    .Running p {
+        padding-top: 20px;
+    }
+    
+    .Running img{
+        height: 70%;
+        width: 70%;
+        object-fit: contain;
+        border-radius: 4px;
+        display: flex;
+    }
+
+    .Faves{
+        grid-area: Faves;
+        max-height: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: 160px 1fr;
+    }
+    
+    .Faves heading {
+        grid-row: 1/2;
+        grid-column: 1/span 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 5px;
+        text-align: center;
+        font-size: 1.4em;
+    }
+    
+    .Faves heading p {
+        color: black;
+        display: flex;
+        justify-self: center;
+        justify-content: center;
+    }
+    
+    .Faves section{
+        grid-row: 2/3;
+        grid-column: 1/ span 5;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        object-fit: contain;
+        max-height: 100%;
+    }
+    
+    .houses-cell {
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
+        width: 70%;
+        height: 350px;
+        flex-wrap: wrap;
+        margin: 10px;
+        background-color: white;
+    }
+    
+    .houses-cell img {
+        display: flex;
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .houses-cell_text {
+        padding: 5px;
+        font-size: 17px;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 1px;
+    }    
+
+    #house1{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house1:hover{
+        width: 75%;
+    }
+    
+    #house2{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house2:hover{
+        width: 75%;
+    }
+    
+    #house3{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house3:hover{
+        width: 75%;
+    }
+    
+    #house4{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house4:hover{
+        width: 75%;
+    }
+    
+    #house5{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house5:hover{
+        width: 75%;
+    }
+
+    .contract form {
+        width: 100%;
+    }
+}
