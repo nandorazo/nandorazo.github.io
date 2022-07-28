@@ -9,7 +9,7 @@ body {
 position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 100px 900px 900px 700px 100px;
+    grid-template-rows: 80px 100px 800px 900px 700px 100px;
     background: whitesmoke;
     grid-template-areas: "header header" "nav nav" "profile profile" "Faves Faves" "about about" "footer footer";
 }
@@ -46,10 +46,13 @@ nav button:hover {
     width: auto;
     overflow: hidden;
     padding-bottom: 50px;
+    margin: 20px;
 }
 
 .survey button {
-    background:rgba(0, 135, 162, 1)
+    background:rgba(0, 135, 162, .8);
+    border-radius: 5px;
+    border: 1px solid red;
 }
 
 .form-btn {
@@ -239,8 +242,9 @@ button {
 }
 
 #cta {
-    background:rgba(0, 135, 162, .8);
+    background:rgba(0, 135, 162, .9);
     color: white;
+    border-radius: 5px;
     padding: 20px;
     text-align: center;
     font-size: 1.5em;
