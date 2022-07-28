@@ -23,7 +23,18 @@ header{
 
 nav {
     grid-area: nav;
-    position: fixed;
+    position: sticky;
+    top: 0;
+}
+
+nav button {
+    height: 90px;
+    background: green;
+    border: 0;
+}
+
+nav button:hover {
+    cursor: pointer;
 }
 
 .survey {
@@ -218,14 +229,22 @@ button {
     display: flex;
     grid-row: 2/3;
     grid-column: 1/2;
-    justify-content: center;
     font-size: 1em;
     flex-direction: column;
     width: 90%;
-    list-style: circle;
+    list-style: disc;
     margin-left: 30px;
     line-height: 1.5;
     letter-spacing: 1.5px;
+}
+
+#cta {
+    background:rgba(0, 135, 162, .8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
 }
 
 .hook {
@@ -370,7 +389,7 @@ footer {
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 150px 1000px 2050px 600px 100px;
+        grid-template-rows: 80px 150px 1100px 2050px 600px 100px;
         grid-template-areas: "header header" "nav nav" "survey survey"  "Faves Faves" " about about" "footer footer";
         max-height: 100%;
     }
@@ -407,6 +426,10 @@ footer {
     }
     .top {
         margin-top: 10px;
+    }
+
+    .survey .main-btn {
+        display: none;
     }
 
     .Cont {
