@@ -9,10 +9,10 @@ body {
 position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 750px 900px 700px 100px;
+    grid-template-rows: 80px 100px 750px 900px 700px 100px;
     /*background: linear-gradient(to top, rgba(217,221,241,1), rgba(217,221,241,.1)) ;*/
     background: whitesmoke;
-    grid-template-areas: "header header" "profile profile" "Faves Faves" "about about" "footer footer";
+    grid-template-areas: "header header" "nav nav" "profile profile" "Faves Faves" "about about" "footer footer";
 }
 
 header{
@@ -22,15 +22,67 @@ header{
     background: white;
 }
 
+nav {
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+}
+
+nav button {
+    height: 90px;
+    background: green;
+    width: 100%;
+    border: 0;
+}
+
+/*nav*/ button:hover {
+    cursor: pointer;
+}
+
 .survey {
     grid-area: profile;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 65% 35%;
     grid-template-rows: 20% 26.6% 26.6% 26.6%;
     height: 100%;
     width: auto;
     overflow: hidden;
     padding-bottom: 50px;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal-content {
+    background: #f4f4f4;
+    margin: 10% auto;
+    width: 75%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .2), 0 7px 0px 0 rgba(0, 0, 0, .2);
+    display: flex;
+    object-fit: contain;
+    height: 500px;
+}
+
+.modal-content-left {
+    display: flex;
+    max-width: 50%;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content-left img {
+    height: 50%;
+    width: auto;
 }
 
 form {
@@ -146,21 +198,27 @@ button {
 }
 
 .coffee {
-    grid-row: 3/4;
-    grid-column: 1/2;
     display: flex;
-    text-align: center;
+    grid-row:3/4;
+    grid-column: 1/2;
     justify-content: space-between;
+    font-size: 1em;
+    object-fit: contain;
     font-size: 3em;
-    color: rgba(0, 135, 162, 1);
+    color:white;
+    background:rgba(0,135, 162, .5);
     text-align: center;
 }
-.coffee img {
+.coffee button {
+    padding-top: 10px;
     height: 100%;
+    border: 0;
+    background:rgba(255, 255, 255, .0)
 }
 
-.coffee p {
-    padding-top: 20px;
+.coffee img {
+    border-radius: 4px;
+    width: 40%;
 }
 
 .Running {
@@ -302,8 +360,8 @@ footer {
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 1450px 2050px 600px 130px;
-        grid-template-areas: "header header" "survey survey"  "Faves Faves" " about about" "footer footer";
+        grid-template-rows: 80px 100px 1050px 2050px 600px 130px;
+        grid-template-areas: "header header" "nav nav" "survey survey"  "Faves Faves" " about about" "footer footer";
         max-height: 100%;
         background: whitesmoke
     }
@@ -314,6 +372,26 @@ footer {
         justify-content: center;
         background: white;
         width: 100%;
+    }
+
+    nav {
+        grid-area: nav;
+        width: 100%;
+    }
+
+    nav button {
+        width: 100%;
+    }
+
+    .modal-content {
+        height: auto;
+        width: 80%;
+    }
+
+    .modal-content-left {
+        display: none;
+        height: 100%;
+        width: 80%;
     }
 
     .survey {
@@ -337,6 +415,10 @@ footer {
 
     form textarea {
         margin-bottom: 10px;
+    }
+
+    .main-btn {
+        width: 100%;
     }
 
     .RF {
@@ -392,7 +474,7 @@ footer {
         display: flex;
         flex-direction: column;
         text-align: center;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: flex-end;
         font-size: 3em;
         color: rgba(0, 135, 162, 1);
@@ -404,10 +486,17 @@ footer {
         border-radius: 6px;
     }
     
-    .coffee p {
-        padding-top: 20px;
+    .coffee button {
+        /*padding-top: 10px;*/
+        width: 100%;
+        text-align: start;
     }
     
+    .coff small {
+        font-size: .2em;
+    }
+
+
     .Running {
         display: flex;
         flex-direction: column;
