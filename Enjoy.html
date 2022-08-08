@@ -69,57 +69,80 @@
         </div>
     </nav>
     <section class = "survey">
-     <!-- <form 
-        method="POST" 
-        action="https://script.google.com/macros/s/AKfycbzN3ECaFrBaMs2v0sPLwLqD6ex2mU_77YfR_ucaAGhqlnWz1Le-PbPTA3U793H-yP6EAQ/exec"
-      id="my-form">
-        <h1><p class="RF">Ready to Find</p><p class="DH">Your Dream Home?</p></h1><p class="hook">Get listings BEFORE they hit the market</p><br>
-        <label for="Name">Name</label>
-        <input name="Name" type="text" placeholder="Your Name" id="name" required>
-        <label for="Contact_Type">How Would You Like to be Contacted?</label>
-        <div class="ctype">
-        <input name="Contact_Type" type="checkbox" id="Call" value="Call">
-        <label for="Call">Call</label>
-        <input type="checkbox" name="Contact_Type" id = "Text" value="Text">
-        <label for="Text">Text</label>
-        <input type="checkbox" name="Contact_Type" value="Email" id="Email">
-        <label for="Email">Email</label>
-        <input type="checkbox" name="Contact_Type" value="DM" id="DM">
-        <label for="DM">DM</label>
-        </div>
-        <label for="Contact_Info">Phone #, Email, or Instagram handle</label>
-        <input name="Contact_Info" type="text" placeholder="Your Contact Info" required>
-        <label for="Message">Message</label>
-        <textarea name="Message" id="Message" cols="20" rows="4" placeholder="Tell me what you're looking for in your next Dream Home"></textarea>
-        <button type="submit">Show Me Exclusive Listings!</button>
-      </form> -->
       <div class="top">
       <!--<p id = "title"><strong>Enjoy Where</strong></p><p id="place"><strong> You Live</strong></p> -->
       <p id = "title"><strong>North Fresno Neighborhoods Have</strong></p><p id="place"><strong>World-Class Amenities</strong></p>
       </div>
       <div class="restaurants">
-        <p>Best Restaurants</p>
-        <img src="https://www.dropbox.com/s/nutzuyv9wfv2049/Wasabi.webp?raw=1" alt="">
+        <button class="open-first-main"><p>Best Restaurants <br><small>click here to learn more!</small> </p></button>
+        <div class="img">
+            <img src="https://www.dropbox.com/s/nutzuyv9wfv2049/Wasabi.webp?raw=1" alt="">
+        </div>
       </div>
-      <div class="coffee">
-            <img src="https://www.dropbox.com/s/gh3p1paeqgp6nj3/kuppajoy.webp?raw=1" alt="">
-            <button class="coff">Luxury Coffee <small>(click me)</small></button>
-      </div>
-      <div class="modal" id="cafe-modal">
+      <div class="modal" id="first-modal-main">
         <div class="modal-content">
-            <span class="close-cafe">&times;</span>
+            <span class="close-first-main">&times;</span>
             <div class="modal-content-left">
                 <img src="https://www.dropbox.com/s/9epe5kpffy78hnk/profile.png?raw=1" alt="">
             </div>
             <div class="modal-content-right">
                 I'm the realest agent in the fucking game right now <br><br>
                 <div class="form-btn">
-                    <button class="sec-btn">Get Started!</button>
+                    <button class="open-first-surv">Get Started!</button>
                 </div>
-                <div class="modal" id="sec-modal">
-                    <div class="modal-content">
-                        <span class="close-sec">&times;</span>
-                        <div class="modal-content-right">
+                <div class="modal" id="first-modal-surv">
+                    <div class="modal-content-survey">
+                        <span class="close-first-surv">&times;</span>
+                        <div class="modal-content-surv">
+                            <form method="POST" 
+                                action="https://script.google.com/macros/s/AKfycbzN3ECaFrBaMs2v0sPLwLqD6ex2mU_77YfR_ucaAGhqlnWz1Le-PbPTA3U793H-yP6EAQ/exec"
+                                id="my-form">
+                                <h1><p class="RF">Ready to Find</p><p class="DH">Your Dream Home?</p></h1><br>
+                                <label for="Name">Name</label>
+                                <input name="Name" type="text" placeholder="Your Name" id="name">
+                                <label for="Contact_Type">How Would You Like to be Contacted?</label>
+                                <div class="ctype">
+                                    <input name="Contact_Type" type="checkbox" id="Call" value="Call">
+                                    <label for="Call">Call</label>
+                                    <input type="checkbox" name="Contact_Type" id = "Text" value="Text">
+                                    <label for="Text">Text</label>
+                                    <input type="checkbox" name="Contact_Type" value="Email" id="Email">
+                                    <label for="Email">Email</label>
+                                    <input type="checkbox" name="Contact_Type" value="DM" id="DM">
+                                    <label for="DM">DM</label>
+                                </div>
+                                <label for="Contact_Info">Phone #, Email, or Instagram handle</label>
+                                <input name="Contact_Info" type="text" placeholder="Phone #, Email, or IG Handle">
+                                <button type="submit">Schedule my consultation!</button><br><br>
+                                <span><a href="https://tircworks.com/privacy-policy/" target="_blank">Privacy Policy</a></span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <div class="coffee">
+        <div id="img">
+            <img src="https://www.dropbox.com/s/gh3p1paeqgp6nj3/kuppajoy.webp?raw=1" alt="">
+        </div>
+            <button class="open-second-main">Luxury Coffee<br><small>learn more</small></button>
+      </div>
+      <div class="modal" id="second-modal-main">
+        <div class="modal-content">
+            <span class="close-second-main">&times;</span>
+            <div class="modal-content-left">
+                <img src="https://www.dropbox.com/s/9epe5kpffy78hnk/profile.png?raw=1" alt="">
+            </div>
+            <div class="modal-content-right">
+                I'm the realest agent in the fucking game right now <br><br>
+                <div class="form-btn">
+                    <button class="open-second-surv">Get Started!</button>
+                </div>
+                <div class="modal" id="second-modal-surv">
+                    <div class="modal-content-survey">
+                        <span class="close-second-surv">&times;</span>
+                        <div class="modal-content-surv">
                             <form method="POST" 
                                 action="https://script.google.com/macros/s/AKfycbzN3ECaFrBaMs2v0sPLwLqD6ex2mU_77YfR_ucaAGhqlnWz1Le-PbPTA3U793H-yP6EAQ/exec"
                                 id="my-form">
@@ -149,8 +172,77 @@
         </div>
     </div>
         <div class="Running">
-            <p id = "run">Healthy Lifestyle</p>
-            <img src="https://www.dropbox.com/s/x1x3d039tpnndcj/running.webp?raw=1" alt="">
+            <button class="open-third-main">Healthy Lifestyle <br> <small>Explore!</small></button>
+            <div class="run-img">
+                <img src="https://www.dropbox.com/s/x1x3d039tpnndcj/running.webp?raw=1" alt="">
+            </div>
+        </div>
+        <div class="modal" id="third-modal-main">
+            <div class="modal-content">
+                <span class="close-third-main">&times;</span>
+                <div class="modal-content-left">
+                    <img src="https://www.dropbox.com/s/9epe5kpffy78hnk/profile.png?raw=1" alt="">
+                </div>
+                <div class="modal-content-right">
+                    I'm the realest agent in the fucking game right now <br><br>
+                    <div class="form-btn">
+                        <button class="open-third-surv">Get Started!</button>
+                    </div>
+                    <div class="modal" id="third-modal-surv">
+                        <div class="modal-content-survey">
+                            <span class="close-third-surv">&times;</span>
+                            <div class="modal-content-surv">
+                                <form method="POST" 
+                                    action="https://script.google.com/macros/s/AKfycbzN3ECaFrBaMs2v0sPLwLqD6ex2mU_77YfR_ucaAGhqlnWz1Le-PbPTA3U793H-yP6EAQ/exec"
+                                    id="my-form">
+                                    <h1><p class="RF">Ready to Find</p><p class="DH">Your Dream Home?</p></h1><br>
+                                    <label for="Name">Name</label>
+                                    <input name="Name" type="text" placeholder="Your Name" id="name">
+                                    <label for="Contact_Type">How Would You Like to be Contacted?</label>
+                                    <div class="ctype">
+                                        <input name="Contact_Type" type="checkbox" id="Call" value="Call">
+                                        <label for="Call">Call</label>
+                                        <input type="checkbox" name="Contact_Type" id = "Text" value="Text">
+                                        <label for="Text">Text</label>
+                                        <input type="checkbox" name="Contact_Type" value="Email" id="Email">
+                                        <label for="Email">Email</label>
+                                        <input type="checkbox" name="Contact_Type" value="DM" id="DM">
+                                        <label for="DM">DM</label>
+                                    </div>
+                                    <label for="Contact_Info">Phone #, Email, or Instagram handle</label>
+                                    <input name="Contact_Info" type="text" placeholder="Phone #, Email, or IG Handle">
+                                    <button type="submit">Schedule my consultation!</button><br><br>
+                                    <span><a href="https://tircworks.com/privacy-policy/" target="_blank">Privacy Policy</a></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="web-surv">
+            <form method="POST" 
+                action="https://script.google.com/macros/s/AKfycbzN3ECaFrBaMs2v0sPLwLqD6ex2mU_77YfR_ucaAGhqlnWz1Le-PbPTA3U793H-yP6EAQ/exec"
+                id="my-form">
+                <h1><p class="RF">Ready to Find</p><p class="DH">Your Dream Home?</p></h1><br>
+                <label for="Name">Name</label>
+                <input name="Name" type="text" placeholder="Your Name" id="name">
+                <label for="Contact_Type">How Would You Like to be Contacted?</label>
+                <div class="ctype">
+                    <input name="Contact_Type" type="checkbox" id="Call" value="Call">
+                    <label for="Call">Call</label>
+                    <input type="checkbox" name="Contact_Type" id = "Text" value="Text">
+                    <label for="Text">Text</label>
+                    <input type="checkbox" name="Contact_Type" value="Email" id="Email">
+                    <label for="Email">Email</label>
+                    <input type="checkbox" name="Contact_Type" value="DM" id="DM">
+                    <label for="DM">DM</label>
+                </div>
+                <label for="Contact_Info">Phone #, Email, or Instagram handle</label>
+                <input name="Contact_Info" type="text" placeholder="Phone #, Email, or IG Handle">
+                <button type="submit">Schedule my consultation!</button><br><br>
+                <span><a href="https://tircworks.com/privacy-policy/" target="_blank">Privacy Policy</a></span>
+            </form>
         </div>
     </section>
     <main class = 'Faves'>
