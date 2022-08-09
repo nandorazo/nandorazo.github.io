@@ -28,6 +28,10 @@ nav {
     top: 0;
 }
 
+nav .form-btn {
+    width: 100%;
+}
+
 nav .main-btn {
     height: 90px;
     background: green;
@@ -43,7 +47,7 @@ nav .main-btn {
     grid-area: profile;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 26.6% 26.6% 26.6%;
+    grid-template-rows: 20% 26.8% 26.6% 26.6%;
     height: 100%;
     width: auto;
     overflow: hidden;
@@ -69,7 +73,7 @@ nav .main-btn {
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .2), 0 7px 0px 0 rgba(0, 0, 0, .2);
     display: flex;
     object-fit: contain;
-    height: 630px;
+    height: 750px;
 }
 
 .modal-content-left {
@@ -209,11 +213,76 @@ button {
 
 .restaurants img {
     border-radius: 4px;
-    width: 80%;
+    width: 54%;
 }
 
 .restaurants small {
     font-size: .3em;
+}
+
+.modal-content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+}
+
+.mcr-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.wof {
+    display: flex;
+    align-items: center;
+}
+
+.wof img {
+    width: 50%;
+}
+
+.form-btn {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal .modal-content .modal-content-right #rest-modal {
+    font-size: 1.7em;
+    background:rgba(255, 255, 255, .0);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+
+
+.wof {
+    display: flex;
+}
+
+.wof img {
+    width: 30%;
+}
+
+.point {
+    display: flex;
+}
+
+.point img {
+    width: 30%;
+}
+
+.map {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+.map img {
+    width: 70%;
 }
 
 .coffee {
@@ -242,7 +311,7 @@ button {
 
 .coffee img {
     border-radius: 4px;
-    width: 50%;
+    width: 100%;
 }
 
 .Running {
@@ -267,7 +336,7 @@ button {
 
 .Running img {
     border-radius: 4px;
-    width: 40%;
+    width: 80%;
 }
 
 .Running small {
@@ -540,6 +609,25 @@ footer {
         object-fit: contain;
         justify-content: flex-end;
         box-shadow: 5px 5px rgba(0, 0, 0, 0.24);
+    }
+
+    .wof {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wof img {
+        width: 50%;
+    }
+
+    .point {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .point img {
+        width: 50%;
     }
     
     .coffee {
