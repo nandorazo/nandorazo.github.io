@@ -2,7 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    font-family: Helvetica;
+    font-family: Montserrat;
 }
 
 body {
@@ -458,13 +458,14 @@ footer {
         margin: 0;
         box-sizing: border-box;
         padding: 0;
-        font-family: Helvetica;
+        font-family: Montserrat;
+        letter-spacing: 1.5px;
     }
     body{
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 100px 1050px 2050px 600px 130px;
+        grid-template-rows: 80px 100px 1100px 2050px 600px 130px;
         grid-template-areas: "header header" "nav nav" "survey survey"  "Faves Faves" " about about" "footer footer";
         max-height: 100%;
         background: whitesmoke
@@ -519,7 +520,7 @@ footer {
     .survey {
         grid-area: survey;
         display: grid;
-        grid-template-rows: 15% 30% 30% 30%;
+        grid-template-rows: 20% 28.5% 28% 28%;
         grid-template-columns: 50% 50%;
         flex-direction: column;
         height: 100%;
