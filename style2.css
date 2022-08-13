@@ -455,11 +455,11 @@ form input, label {
 }
 
 form input {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 form label {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 input::placeholder{
