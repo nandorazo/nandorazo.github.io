@@ -482,6 +482,14 @@ input::placeholder{
     padding-right: 20px;
 }
 
+.contact-form button{
+width: 85%;
+        height: 50px;
+        background-color: rgba(31,83,160,1);
+        color: white;
+        font-size: 1.1em;
+        border-radius: 5px;
+}
 footer{
     background-color: whitesmoke;
     grid-area: footer;
