@@ -352,20 +352,22 @@ a:active { text-decoration: none; }
     line-height: 1.5;
 }
 
-#about {
+.about {
     grid-area: about;
     display: grid;
     grid-template-rows: 80px 1fr;
+    grid-template-columns: 1fr;
     background:linear-gradient(to bottom,rgba(217,221,241,.5), rgba(217,221,241,0.1));
 }
 
-#about heading {
+.about header {
     display: flex;
     grid-row: 1/2;
+    grid-column: 1/2;
     justify-content: center;
     color: rgba(31,83,160,1);
     text-shadow: 1px 1px black;
-
+    background-color: rgba(255,255,255,0);
 }
 
 .about_me {
