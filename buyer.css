@@ -201,7 +201,7 @@ a:active { text-decoration: none; }
     color: black;
 }
 .profile{
-    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,.4)), url("https://www.dropbox.com/s/5d4dlatysyxq29j/background.jpg?raw=1");
+    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,.4)), url("https://www.dropbox.com/s/gunjrsfld8iso0b/background.webp?raw=1");
     background-position: 50% 30%;
     background-size: 100%;
     grid-area: profile;
@@ -327,7 +327,7 @@ a:active { text-decoration: none; }
     text-shadow: 1px 1px black;
 }
 
-#about_me {
+.about_me {
     display: inline-flex;
     grid-row: 2/3;
     flex-direction: row;
@@ -336,14 +336,14 @@ a:active { text-decoration: none; }
     align-items: center;
 }
 
-#about_txt {
+.about_txt {
     max-width: 45%;
     font-size: max(3vh);
     letter-spacing: .05em;
     line-height: 3;
 }
 
-#about_me img{
+.about_me img{
     display: flex;
     height: 80%;
     justify-self: center;
@@ -376,11 +376,19 @@ footer{
     padding-right: 20px;
 }
 
-footer img{
-    max-height: 100%;
-    max-width: 100%;
+footer .foot-img {
+    display: flex;
     object-fit: contain;
-    display: inline-flex;
+    height: 100px;
+    width: auto;
+}
+
+.foot-img img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    margin:0;
+    padding: 0;
 }
 
 @media screen and (max-width: 768px){
