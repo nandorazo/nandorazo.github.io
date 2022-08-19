@@ -368,7 +368,7 @@ a:active { text-decoration: none; }
 
 }
 
-#about_me {
+.about_me {
     display: inline-flex;
     grid-row: 2/3;
     flex-direction: row;
@@ -376,14 +376,14 @@ a:active { text-decoration: none; }
     justify-content: space-evenly;
 }
 
-#about_txt {
+.about_txt {
     max-width: 45%;
     font-size: max(3vh);
     letter-spacing: .05em;
     line-height: 1.5;
 }
 
-#about_me img{
+.about_me img{
     display: flex;
     max-height: 65%;
     justify-self: flex-end;
