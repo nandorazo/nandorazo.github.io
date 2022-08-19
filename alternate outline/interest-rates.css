@@ -1,0 +1,588 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Helvetica;
+}
+
+body {
+position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 100px 800px 900px 700px 100px;
+    background: whitesmoke;
+    grid-template-areas: "header header" "nav nav" "profile profile" "Faves Faves" "about about" "footer footer";
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    background: white;
+}
+
+nav {
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+}
+
+nav button {
+    height: 90px;
+    background: green;
+    border: 0;
+}
+
+nav button:hover {
+    cursor: pointer;
+}
+
+.survey {
+    grid-area: profile;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 45% 5% 20%;
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+    padding-bottom: 50px;
+    margin: 20px;
+}
+
+.survey button {
+    background:rgba(0, 135, 162, .8);
+    border-radius: 5px;
+    border: 1px solid red;
+}
+
+.form-btn {
+    grid-column: 2/3;
+    grid-row: 1/span 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-btn button {
+    width: 100%;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal-content {
+    background: #f4f4f4;
+    margin: 10% auto;
+    width: 75%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .2), 0 7px 0px 0 rgba(0, 0, 0, .2);
+    display: flex;
+    object-fit: contain;
+    height: 500px;
+}
+
+.modal-content-left {
+    display: flex;
+    max-width: 50%;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content-left img {
+    height: 50%;
+    width: auto;
+}
+
+/*.modal-content-right {
+    border: 1px solid green;
+}*/
+
+form {
+    grid-row: 1/span 4;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+form h1 {
+    text-align: center;
+    /*
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
+    0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    color: white;*/
+}
+
+form input, label {
+    width: 75%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form h1 {
+    font-size: 1.6em;
+}
+
+form p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1em;
+}
+
+form input {
+    margin-bottom: 10px;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form button {
+    font-size: 1em;
+}
+
+form a {
+    font-size: .7em;
+}
+
+input::placeholder{
+    text-align: center;
+    font-size: .75em;
+}
+
+.ctype {
+    width: 75%;
+    display: flex;
+    margin-bottom: 10px;
+    font-size: .75em;
+}
+
+textarea {
+    width: 75%;
+    height: 25%;
+    margin-bottom: 30px;
+}
+
+button {
+    width: 75%;
+    background: rgba(10, 9, 10, .8);
+    color:rgba(255, 255, 255, .9);
+    border-radius: 5px;
+    height: 50px;
+    font-size: 1.25em;
+}
+
+.top {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#title {
+    font-size: 2.5em;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
+    0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    color: white;
+}
+#place {
+    color: rgba(0, 135, 162, 1);
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#header2 {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.RF {
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
+    0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    color: white;
+    letter-spacing: 1.5px;
+    font-size: 1.2em;
+}
+
+.DH {
+    color:rgba(0, 135, 162, 1);
+    letter-spacing: 1.5px;
+    font-size: 1.2em;
+}
+
+.Cont {
+    display: flex;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 1em;
+    flex-direction: column;
+    width: 90%;
+    list-style: disc;
+    margin-left: 30px;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+}
+
+#cta {
+    background:rgba(0, 135, 162, .9);
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+.hook {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+
+}
+
+#call {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    padding-left: 25px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+    font-size: 1.2em;
+}
+
+.Faves{
+    grid-area: Faves;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 100px 1fr 1fr;
+}
+
+.Faves heading {
+    grid-row: 1/2;
+    grid-column: 1/span 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    width: 100%;
+}
+/*.Faves heading h1 {
+    display: flex;
+    justify-content: center;
+    text-justify: center;
+    color: rgba(31,83,160,1);
+    text-shadow: 1px 1px black;
+}
+
+.Faves heading p {
+    color: black;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}*/
+
+#MR {
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 
+    0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+    , 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    color: white;
+    font-size: 2.5em;
+}
+
+#suc {
+    color: rgba(0, 135, 162, 1);
+    font-size: 2.5em;
+}
+
+.Faves section{
+    grid-row: 2/3;
+    grid-column: 1/ span 5;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    object-fit: contain;
+}
+
+.houses-cell {
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
+    width: 25%;
+    margin: 10px;
+    background-color: white;
+}
+
+.houses-cell img {
+    display: flex;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.houses-cell_text {
+    padding: 5px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.contract{
+    grid-area: about;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contract form { 
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background:rgba(255, 255, 255, 0.5);
+    padding-bottom: 20px;
+}
+
+footer {
+    grid-area: footer;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 768px){
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        font-family: Helvetica;
+    }
+    body{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 150px 1100px 2050px 600px 100px;
+        grid-template-areas: "header header" "nav nav" "survey survey"  "Faves Faves" " about about" "footer footer";
+        max-height: 100%;
+    }
+
+    header{
+        grid-area: header;
+        display: flex;
+        justify-content: center;
+        background: white;
+        width: 100%;
+    }
+
+    nav {
+        grid-area: nav;
+        position: sticky;
+        top: 0;
+        margin: 15px;
+    }
+
+    nav .main-btn {
+        background: green;
+        border: 0;
+        height: 100px;
+        font-size: 1.7em;
+    }
+
+    .survey {
+        grid-area: survey;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 50px;
+        margin: 0;
+    }
+    .top {
+        margin-top: 10px;
+    }
+
+    .survey .main-btn {
+        display: none;
+    }
+
+    .Cont {
+        margin-top: 25px;
+        line-height: 1.75rem;
+    }
+
+    .hook {
+        margin-top: 20px;
+    }
+
+    .Call  {
+        margin-top: 15px;
+    }
+
+    .modal-content{
+        width: 90%;
+        height: auto;
+        font-size: 1.2em;
+    }
+
+    .modal-content input {
+        border-radius: 5px;
+        height: 30px;
+        width: 80%;
+
+    }
+
+    .modal-content-left img {
+        display: none;
+    }
+
+    form input {
+        margin-bottom: 10px;
+    }
+
+    form textarea {
+        margin-bottom: 10px;
+    }
+
+    .Faves{
+        grid-area: Faves;
+        max-height: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: 160px 1fr;
+    }
+    
+    .Faves heading {
+        grid-row: 1/2;
+        grid-column: 1/span 5;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        padding-top: 5px;
+        text-align: center;
+    }
+    .Faves heading h1 {
+        display: flex;
+        justify-content: center;
+        color: rgba(31,83,160,1);
+        text-shadow: 1px 1px black;
+        font-size: 40px;
+        padding-top: 15px;
+    }
+    
+    .Faves heading p {
+        color: black;
+        display: flex;
+        justify-self: center;
+        justify-content: center;
+    }
+    
+    .Faves section{
+        grid-row: 2/3;
+        grid-column: 1/ span 5;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        object-fit: contain;
+        max-height: 100%;
+    }
+    
+    .houses-cell {
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
+        width: 70%;
+        height: 350px;
+        flex-wrap: wrap;
+        margin: 10px;
+        background-color: white;
+    }
+    
+    .houses-cell img {
+        display: flex;
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .houses-cell_text {
+        padding: 5px;
+        font-size: 17px;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 1px;
+    }    
+
+    #house1{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house1:hover{
+        width: 75%;
+    }
+    
+    #house2{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house2:hover{
+        width: 75%;
+    }
+    
+    #house3{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house3:hover{
+        width: 75%;
+    }
+    
+    #house4{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house4:hover{
+        width: 75%;
+    }
+    
+    #house5{
+        transition-property: width;
+        transition-duration: 400ms;
+    }
+    #house5:hover{
+        width: 75%;
+    }
+
+    .contract form {
+        width: 100%;
+    }
+}
+
