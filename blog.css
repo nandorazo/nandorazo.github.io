@@ -239,3 +239,44 @@ a:active { text-decoration: none; }
     height: 100%;
     width: auto;
 }
+
+@media screen and (max-width: 768px){
+    .main-header {
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-header .old_school {
+        text-align: end;
+    }
+    .link-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .link-container .image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .link-container .text {
+        width: 100%;
+        margin: 0;
+    }
+
+    .text header{
+        width: 100%;
+        text-align: center;
+    }
+    
+    
+    .text p {
+        display: none;
+    }
+}
