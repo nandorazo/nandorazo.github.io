@@ -24,18 +24,27 @@
     <meta name="keywords" content="Fernando Razo, Fernando, real estate, realtor, home buying, buying a home, buying">
 </head>
 <body>
-    <header>
-        <div class = 'socialM'>
-          <a id='fb' href = https://www.facebook.com/fernandorazojr.re><img src = "https://www.dropbox.com/s/mtrj6kofushhvmy/FB_1.webp?raw=1" alt="Fernando Razo, Real Estate Agent Facebook" width=25 height=25></a> 
-            <a id='ig' href = https://www.instagram.com/fernandorazojr><img src = "https://www.dropbox.com/s/94r6cc10tdahgqs/IG.webp?raw=1" alt="Fernando Razo, Realtor Instagram" width=25 height=25></a>
+    <header class="main-head">
+        <div class="address">
+            <address>
+                Park Place Real Estate <br>
+                418 Clovis Ave. <br>
+                Clovis, CA <br>
+                93612
+            </address>
         </div>
-        <div class = 'old_school'>
-          <a href ="tel:5597082634"> &#x1f4de(559) 708-2634</a>
-          <a href = "mailto:fernando@parkplaceagents.com">&#9993 fernando@parkplaceagents.com</a>
+        <div class = 'contact-info'>
+            <div class="socialM">
+                <a id='fb' href = https://www.facebook.com/fernandorazojr.re><img src = "https://www.dropbox.com/s/mtrj6kofushhvmy/FB_1.webp?raw=1" alt="Fernando Razo, Real Estate Agent Facebook" width=35 height=35></a> &nbsp; &nbsp; &nbsp;
+                <a id='ig' href = https://www.instagram.com/fernandorazojr><img src = "https://www.dropbox.com/s/94r6cc10tdahgqs/IG.webp?raw=1" alt="Fernando Razo, Realtor Instagram" width=35 height=35></a>
+            </div>
+            <div class="old_school">
+                <a href ="tel:5597082634"> &#x1f4de(559) 708-2634</a>
+                <a href = "mailto:fernando@parkplaceagents.com">&#9993 fernando@parkplaceagents.com</a>
+            </div>
         </div>
-        <div class="old_school_mob">
-            <a href ="tel:5597082634"> (559) 708-2634</a>
-          <a href = "mailto:fernando@parkplaceagents.com">fernando@parkplaceagents.com</a>
+        <div class="hours">
+            Open<br> Monday-Saturday from <br><time datetime="08:00">8:00AM</time> to <time datetime="20:00">8:00PM</time>
         </div>
     </header>
     <div class="nav-container">
@@ -56,7 +65,38 @@
         </nav>
     </div>
       <section class = 'profile'>
-          <iframe src="https://jdres.shinyapps.io/Landing-Survey/" frameborder="0"></iframe>
+        <div class="contact-form">
+            <header>
+                <h1>
+                    Ready to Buy Your Dream Home?
+                </h1> <br>
+                <h4>
+                    Tell me how to contact you and see how I can save you THOUSANDS on your next home purchase!
+                </h4>
+            </header>
+            <form method="POST" 
+                action="https://script.google.com/macros/s/AKfycbzN3ECaFrBaMs2v0sPLwLqD6ex2mU_77YfR_ucaAGhqlnWz1Le-PbPTA3U793H-yP6EAQ/exec"
+                id="my-form">
+                <label for="Name">Name</label>
+                <input name="Name" type="text" placeholder="Your Name" id="name">
+                <label for="Contact_Type">How Would You Like to be Contacted?</label>
+                <div class="ctype">
+                    <input name="Contact_Type" type="checkbox" id="Call" value="Call">
+                    <label for="Call">Call</label>
+                    <input type="checkbox" name="Contact_Type" id = "Text" value="Text">
+                    <label for="Text">Text</label>
+                    <input type="checkbox" name="Contact_Type" value="Email" id="Email">
+                    <label for="Email">Email</label>
+                    <input type="checkbox" name="Contact_Type" value="DM" id="DM">
+                    <label for="DM">DM</label>
+                </div>
+                <label for="Contact_Info">Phone #, Email, or Instagram handle</label>
+                <input name="Contact_Info" type="text" placeholder="Phone #, Email, or IG Handle">
+                <button type="submit">Schedule my consultation!</button><br><br>
+                <span><a href="https://tircworks.com/privacy-policy/" target="_blank">Privacy Policy</a></span>
+            </form>
+        </div>
+       <!--   <iframe src="https://jdres.shinyapps.io/Landing-Survey/" frameborder="0"></iframe> -->
       </section> 
       <main class = 'Faves'>
           <!--Image Gallery-->
@@ -119,21 +159,69 @@
             <img src="https://www.dropbox.com/s/eiw1mb49k39sdrx/contact.webp?raw=1" alt="Fernando Razo. Premiere real estate agent in Fresno and Clovis California"> 
         </section> 
     </main>
-      <main id = 'contact'>
-        <iframe src="https://jdres.shinyapps.io/Landing-Survey/" frameborder="0"></iframe>
+      <main class = 'contact'>
+        <div class="contact-form">
+            <header>
+                <h1>
+                    Ready to Buy Your Dream Home?
+                </h1> <br>
+                <h4>
+                    Tell me how to contact you and see how I can save you THOUSANDS on your next home purchase!
+                </h4>
+            </header>
+            <form method="POST" 
+                action="https://script.google.com/macros/s/AKfycbzN3ECaFrBaMs2v0sPLwLqD6ex2mU_77YfR_ucaAGhqlnWz1Le-PbPTA3U793H-yP6EAQ/exec"
+                id="my-form">
+                <label for="Name">Name</label>
+                <input name="Name" type="text" placeholder="Your Name" id="name">
+                <label for="Contact_Type">How Would You Like to be Contacted?</label>
+                <div class="ctype">
+                    <input name="Contact_Type" type="checkbox" id="Call" value="Call">
+                    <label for="Call">Call</label>
+                    <input type="checkbox" name="Contact_Type" id = "Text" value="Text">
+                    <label for="Text">Text</label>
+                    <input type="checkbox" name="Contact_Type" value="Email" id="Email">
+                    <label for="Email">Email</label>
+                    <input type="checkbox" name="Contact_Type" value="DM" id="DM">
+                    <label for="DM">DM</label>
+                </div>
+                <label for="Contact_Info">Phone #, Email, or Instagram handle</label>
+                <input name="Contact_Info" type="text" placeholder="Phone #, Email, or IG Handle">
+                <button type="submit">Schedule my consultation!</button><br><br>
+                <span><a href="https://tircworks.com/privacy-policy/" target="_blank">Privacy Policy</a></span>
+            </form>
+        </div>
+       <!-- <iframe src="https://jdres.shinyapps.io/Landing-Survey/" frameborder="0"></iframe> -->
       </main>
       <footer>
         <div class="foot-img">
             <a href="https://www.fernandorazo.com"><img src="https://www.dropbox.com/s/8lehzj0he69tdh7/PPRE.webp?raw=1" alt="Fernando Razo, Realtor"></a>
+            <img id="eho" src="images/eho.png" alt="Equal Opportunity Housing Realtor">
         </div>
-          <p>CA DRE# 02029996</p>
-          <div class = 'socialM'>
-            <a id='fb' href = https://www.facebook.com/fernandorazojr.re><img src = "https://www.dropbox.com/s/mtrj6kofushhvmy/FB_1.webp?raw=1" alt="Fernando Razo, real estate agent in Fresno California Facebook" width=25 height=25></a> 
-            <a id='ig' href = https://www.instagram.com/fernandorazojr><img src = "https://www.dropbox.com/s/94r6cc10tdahgqs/IG.webp?raw=1" alt="Fernando Razo, real estate agent in Clovis California Instagram" width=25 height=25></a>
-          </div>
-          <div class = 'old_school_mob'>
-            <a href ="tel:5597082634">(559) 708-2634</a><a href = "mailto:fernando@parkplaceagents.com">fernando@parkplaceagents.com</a>
-          </div>
+        <div class="contact-information">
+            <div class = 'socialM'>
+                <a id='fb' href = https://www.facebook.com/fernandorazojr.re><img src = "https://www.dropbox.com/s/mtrj6kofushhvmy/FB_1.webp?raw=1" alt="Fernando Razo, real estate agent in Fresno California Facebook" width=45 height=45></a> 
+                <a id='ig' href = https://www.instagram.com/fernandorazojr><img src = "https://www.dropbox.com/s/94r6cc10tdahgqs/IG.webp?raw=1" alt="Fernando Razo, real estate agent in Clovis California Instagram" width=45 height=45></a>
+            </div>
+            <div class = 'old_school'>
+                <a href ="tel:5597082634">(559) 708-2634</a>
+                <a href = "mailto:fernando@parkplaceagents.com">fernando@parkplaceagents.com</a>
+            </div>
+        </div>
+        <div class="info">
+            <address>
+                Fernando Razo <br>
+                CA DRE# 02029996 <br>
+                Park Place Real Estate <br>
+                418 Clovis Ave. <br>
+                Clovis, CA <br>
+                93612
+            </address> <br>
+            <div class="foot-hours">
+                Open Monday-Saturday <br>
+                <time datetime="08:00-08:00">8AM</time> to <time datetime="20:00-08:00">8PM</time>
+            </div>
+        </div>
       </footer>
       <script src="https://nandorazo.github.io/app.js"></script>
 </body>
