@@ -375,7 +375,6 @@ footer .socialM a {
     body{
         position: relative;
         display: grid;
-        grid-template-columns: 1fr 1fr;
         grid-template-rows: 110px 100px 1fr 700px 500px 600px;
         grid-template-areas: "header" "nav" "content" "subscribe" "next" "footer";
         max-height: 100%;
@@ -383,6 +382,10 @@ footer .socialM a {
     
     .emoji {
         display: none;
+    }
+
+    .main-head {
+        grid-area: header;
     }
     .old_school{
         display: flex;
@@ -418,7 +421,6 @@ footer .socialM a {
 
     .content {
         grid-area: content;
-        font-size: 1.5em;
     }
 
    .content .head-img {
@@ -435,7 +437,11 @@ footer .socialM a {
    }
 
    .subscribe {
-    font-size: 1.5em;
+    grid-area: subscribe;
+   }
+
+   .subscribe .subscribe-content  {
+    width: 90%;
    }
 
    .subscribe .subscribe-content form input {
@@ -443,17 +449,22 @@ footer .socialM a {
     margin-right: 10px;
     border-radius: 5px;
     height: 60px;
+    width: 100%;
    }
 
    .subscribe form input::placeholder {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.2em;
    }
 
     .subscribe form button {
-        width: 350px;
-        height: 80px;
+        width: 100%;
+        height: 50px;
         font-size: 1.2em;
+    }
+
+    .next {
+        grid-area: next;
     }
 
    .link-next-container {
@@ -476,37 +487,37 @@ footer .socialM a {
     display: flex;
     flex-direction: column;
     padding-bottom: 15px;
-}
+    }
 
-footer .foot-img {
+    footer .foot-img {
     height: 210px;
     width: auto;
     object-fit: contain;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-}
+    }
 
-footer .foot-img #eho {
+    footer .foot-img #eho {
     height: 100px;
     width: auto;
-}
+    }
 
-footer .info {
+    footer .info {
     text-align: center;
-}
+    }
 
-footer .info address{
+    footer .info address{
     width: 100%;
     margin:0;
-}
+    }
 
-footer .socialM a{
+    footer .socialM a{
     margin: 15px;
-}
+    }
 
-footer .old_school {
+    footer .old_school {
     display: flex;
     align-items: center;
-}
+    }
 }
