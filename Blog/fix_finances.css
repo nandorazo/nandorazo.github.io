@@ -438,14 +438,11 @@ footer .socialM a {
     font-size: 1.5em;
    }
 
-   .subscribe form{
-    height: 350px;
-   }
-
    .subscribe .subscribe-content form input {
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 5px;
+    height: 60px;
    }
 
    .subscribe form input::placeholder {
