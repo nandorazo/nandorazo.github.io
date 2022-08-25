@@ -282,6 +282,7 @@ a:active { text-decoration: none; }
 
 .subscribe form input::placeholder {
     text-align: center;
+    font-size: 1em;
 }
 
 .subscribe form button {
@@ -437,11 +438,26 @@ footer .socialM a {
     font-size: 1.5em;
    }
 
+   .subscribe form{
+    height: 350px;
+   }
+
    .subscribe .subscribe-content form input {
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 5px;
    }
+
+   .subscribe form input::placeholder {
+    text-align: center;
+    font-size: 2em;
+   }
+
+    .subscribe form button {
+        width: 350px;
+        height: 80px;
+        font-size: 1.2em;
+    }
 
    .link-next-container {
     display: flex;
