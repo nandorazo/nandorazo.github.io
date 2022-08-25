@@ -237,7 +237,7 @@ a:active { text-decoration: none; }
 
 .image img {
     height: 100%;
-    width: auto;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px){
