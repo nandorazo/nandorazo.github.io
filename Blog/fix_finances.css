@@ -8,21 +8,39 @@
 body {
     position: relative;
     display: grid;
-    grid-template-rows: 80px 100px 1fr 400px;
-    grid-template-areas: "header" "nav" "content" "footer";
+    grid-template-rows: 110px 100px 1fr 400px 370px 400px;
+    grid-template-areas: "header" "nav" "content" "subscribe" "next" "footer";
     background-color: whitesmoke;
 }
 
-.main-header {
+.main-head {
     grid-area: header;
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
     background-color: rgba(217,221,241,.83);
+    font-size: .8em;
 }
 
+.socialM {
+    display: flex;
+    justify-content: center;
+}
+
+.old_school {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+address {
+    margin-left: 10px;
+}
+
+.hours {
+    margin-right: 10px;
+}
 
 .old_school_mob{
     display: none;
@@ -201,10 +219,20 @@ a:active { text-decoration: none; }
     padding: 50px;
 }
 
-.content p {
+.content header h4{
+    margin-bottom: 15px;
+}
+
+.content .text {
     letter-spacing: 1;
     line-height: 1.5;
     padding: 50px;
+}
+
+.embed-article {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1em;
 }
 
 .content .head-img {
@@ -221,7 +249,61 @@ a:active { text-decoration: none; }
     box-shadow: 4px 4px rgba(0, 0, 0, .2);
 }
 
-footer h1 {
+.subscribe {
+    grid-area: subscribe;
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe-content {
+    text-align: center;
+    width: 70%;
+}
+
+.subscribe header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.subscribe form {
+    margin: 5px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe form input {
+    height: 60px;
+    width: 500px;
+    margin-top: 30px;
+}
+
+.subscribe form input::placeholder {
+    text-align: center;
+}
+
+.subscribe form button {
+    width: 270px;
+    height: 50px;
+    background: rgba(31,83,160,1);
+    margin-top: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1em;
+}
+
+.subscribe form button:hover {
+    cursor: pointer;
+}
+
+
+.link-next {
+    grid-area: next;
+}
+
+.link-next h1 {
     text-align: center;
 }
 
@@ -249,40 +331,93 @@ footer h1 {
     width: 100%;
 }
 
-.foot-info {
-    background: white;
-    display: flex;
-    justify-content: space-evenly;
+footer{
+    background-color: whitesmoke;
+    grid-area: footer;
+    display: inline-flex;
+    object-fit: contain;
     align-items: center;
-    text-align: center;
-    padding-top: 20px;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    background-color: white;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.foot-info .foot-image {
-    height: 100%;
-    width: 200px;
+footer .foot-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: contain;
+    height: 250px;
+    width: auto;
+}
+
+.foot-img img {
+    height: 100px;
+    width: auto;
     object-fit: contain;
     margin:0;
+    padding: 0;
 }
 
-.foot-image img{
-    height:100%;
-    width: 200px;
+footer .socialM a {
+    margin: 15px;
 }
+
 
 @media screen and (max-width: 768px){
-    .main-header {
-        padding-left: 15px;
-        padding-right: 15px;
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        font-family: Montserrat;
+    }
+    body{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 110px 100px 1fr 700px 500px 600px;
+        grid-template-areas: "header" "nav" "content" "subscribe" "next" "footer";
+        max-height: 100%;
+    }
+    
+    .emoji {
+        display: none;
+    }
+    .old_school{
         display: flex;
+        align-items: flex-end;
+        margin-right: 10px;
+        height: 50%;
         justify-content: space-between;
+        padding-bottom: 5px;
+    }
+    address {
+        line-height: 1.5;
     }
 
-    .main-header .old_school {
-        text-align: end;
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .socialM {
+        display: flex;
+        flex-direction: row;
+        max-height: 75%;
+        line-height: 1.5;
+        margin-right: 10px;
+    }
+
+    .hours {
+        display: none;
+    }
+
+    .content {
+        grid-area: content;
+        font-size: 1.5em;
     }
 
    .content .head-img {
@@ -298,15 +433,67 @@ footer h1 {
     width: 300px;
    }
 
+   .subscribe {
+    font-size: 1.5em;
+   }
+
+   .subscribe .subscribe-content form input {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+   }
+
    .link-next-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
    }
 
    .link-image {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     margin: 0;
    }
+
+   footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
+footer .foot-img {
+    height: 210px;
+    width: auto;
+    object-fit: contain;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .foot-img #eho {
+    height: 100px;
+    width: auto;
+}
+
+footer .info {
+    text-align: center;
+}
+
+footer .info address{
+    width: 100%;
+    margin:0;
+}
+
+footer .socialM a{
+    margin: 15px;
+}
+
+footer .old_school {
+    display: flex;
+    align-items: center;
+}
 }
