@@ -216,8 +216,8 @@ a:active { text-decoration: none; }
 }
 
 .content .head-img img {
-    height: 300px;
-    width: 300px;
+    /*height: 300px;
+    width: 300px;*/
     box-shadow: 4px 4px rgba(0, 0, 0, .2);
 }
 
