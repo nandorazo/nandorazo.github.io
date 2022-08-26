@@ -375,7 +375,7 @@ footer .socialM a {
     body{
         position: relative;
         display: grid;
-        grid-template-rows: 110px 100px 1fr 700px 500px 600px;
+        grid-template-rows: 110px 100px 1fr 450px 500px 600px;
         grid-template-areas: "header" "nav" "content" "subscribe" "next" "footer";
         max-height: 100%;
     }
