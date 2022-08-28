@@ -9,7 +9,7 @@ body{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 110px 100px 600px 1100px 700px 700px 250px;
+    grid-template-rows: 110px 100px 600px 1100px 750px 700px 250px;
     grid-template-areas: "header header" "nav nav" "profile profile" "Faves Faves" " about about" "contact contact" "footer footer";
 }
 
