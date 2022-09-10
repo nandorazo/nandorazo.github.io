@@ -344,6 +344,7 @@ footer .socialM a {
     background-position: 50% 30%;
     background-size: 100%;
         max-height: 100%;
+        
     }
 
     #fixedDiv {
@@ -374,6 +375,10 @@ footer .socialM a {
         width: 100%;
         margin: 50px;
         padding: 20px;
+    }
+
+    .lead-form .txt {
+        color: green;
     }
 
     .success .modal {
