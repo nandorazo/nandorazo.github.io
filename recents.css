@@ -373,6 +373,10 @@ footer .socialM a {
     }
 
     .success .modal {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr;
+        font-family: helvetica;
         margin: 30px;
         height: 90%;
         width: 90%;
