@@ -1,32 +1,36 @@
 * {
     margin: 0;
+    box-sizing: border-box;
+    padding: 0;
 }
 
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 80px 370px 200px;
+    grid-template-rows: 10% 40% 20%; /*12.3% 60% 30.7% 80px 370px 200px*/
     grid-template-areas: "Header" "Profile" "Quote";
     background: linear-gradient(to top, rgba(255,255,255,.8), rgba(255,255,255,.8)),url("/images/background.webp");
     background-size: 100%;
     background-position: 50% 30%;
-    object-fit: contain;
     font-family: Helvetica, sans-serif;
+    overflow: hidden;
 }
 
 .signature {
     font-family: 'Dancing Script', cursive;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 1%;
+    margin-left: 1%;
+    color: rgba(31,83,160,1)
 }
 
 .main {
     grid-area: Profile;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 60% 40%;
     grid-template-areas: "form img";
     object-fit: contain;
     max-height: 100%;
+    margin: 5px;
 }
 
 
@@ -42,24 +46,24 @@ body {
 .form .modal {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .form header {
     font-size: 1.5em;   
     margin-bottom: 10px;
-    width: 500px;
+    width: 80%;
     text-align: center;
 }
 
 .form form {
     display: flex;
     justify-content: center;
-    width: 500px;
+    width: 100%;
 }
 
 form input {
-    width: 300px;
+    width: 30%;
 }
 
 form input::placeholder {
@@ -71,9 +75,9 @@ form button {
     color: white;
     margin-left: 10px;
     height: 45px;
-    width: 200px;
+    width: 25%;
     border: none;
-    font-size: 1.1em;
+    font-size: 1em;
     box-shadow: 5px 5px gray;
 }
 
@@ -83,21 +87,23 @@ form button:hover {
 
 .pic {
     grid-area: img;
-    margin-left: 25px;
+    margin-left: 1%;
     display: flex;
+    max-height: 100%;
+    max-width: 100%;
     object-fit: contain;
     overflow: hidden;
 }
 
 .pic img {
     max-height: 100%;
-    width: auto;
+    max-width: 100%;
 }
 
 .quote {
     grid-area: Quote;
     background-color: white;
-    padding-top: 50px;
+    padding-top: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,13 +113,16 @@ form button:hover {
     text-align: center;
 }
 
+.quote .text {
+    width: 80%;
+}
+
 blockquote {
     font-family: Montserrat;
     font-size: 1.2em;
     font-style: italic;
-    width: 700px;
     margin: 0.25em 0;
-    padding: 0.35em 40px;
+    padding: 20px 10px;/*.35em 40px*/
     line-height: 1.45;
     position: relative;
     text-align: center;
@@ -139,4 +148,105 @@ blockquote:after {
     right:0;
     bottom:-0.5em;
     content: "\201D";
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to top, rgba(255,255,255,.9), rgba(255,255,255,.9)),url("/images/background.webp");
+        background-size: 100%;
+        background-position: 50% 0%;
+        background-repeat: no-repeat;
+        font-family: Helvetica, sans-serif;
+        overflow: hidden;
+    }
+
+    .signature {
+        text-align: center;
+        height: 60px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+    }
+    
+
+    .form .modal {
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form form {
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-evenly;
+        align-items: center;
+        margin:0;
+    }
+    form span {
+        display: none;
+    }
+
+    form input {
+        width: 80%;
+        height: 40px;
+        margin:0;
+    }
+
+    form button {
+        width: 80%;
+        border-radius: 5px;
+        margin: 0;
+    }
+
+    .pic img {
+        display: none;
+    }
+
+    .quote .text {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    blockquote {
+        font-family: Montserrat;
+        font-size: 1em;
+        font-style: italic;
+        margin: 0.25em 0;
+        padding: 20px 30px;/*.35em 40px*/
+        line-height: 1.45;
+        position: relative;
+        text-align: center;
+        color: #383838;
+    }
+    
+    blockquote:before {
+        font-family: Georgia, serif;
+        position: absolute;
+        font-size: 5em;
+        line-height: 1;
+        top: 0;
+        left: 0;
+        content: "\201C";
+        padding-left: 5px;
+    }
+    blockquote:after {
+        font-family: Georgia, serif;
+        position: absolute;
+       /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+        float:right;
+        font-size:5em;
+        line-height: 1;
+        right:0;
+        bottom:-0.5em;
+        content: "\201D";
+        padding-right: 5px;
+    }
+    
 }
