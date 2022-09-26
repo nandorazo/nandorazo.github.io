@@ -150,6 +150,17 @@ blockquote:after {
     content: "\201D";
 }
 
+blockquote cite {
+color: #999999;
+font-size: 14px;
+display: block;
+margin-top: 5px;
+}
+ 
+blockquote cite:before {
+content: "\2014 \2009";
+}
+
 @media screen and (max-width: 768px) {
     body {
         display: flex;
