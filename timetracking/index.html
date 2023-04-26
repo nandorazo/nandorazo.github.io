@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Timetracking page</title>
+    <link rel="stylesheet" href="hours.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>
+            Razo Real Estate
+        </h1>
+        <h2>
+            VA Timetracking System
+        </h2>
+    </header>
+    <section class="form">
+        <form id="my-form" method="post" action="">
+            <label for="Employee-ID">Employee ID</label>
+            <input type="number" name="Employee-ID" step=".5">
+            <label for="Activity">Activity</label>
+            <select name="Activity" id="act">
+                <option value="Day-Start">Clock In</option>
+                <option value="Break-Out">Break - Out</option>
+                <option value="Break-In">Break - In</option>
+                <option value="Lunch-Out">Lunch - Out</option>
+                <option value="Lunch-In">Lunch - In</option>
+                <option value="Day-End">Clock Out</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <script src="hours.js"></script>
+</body>
+</html>
