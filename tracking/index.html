@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Timetracking page</title>
+    <link rel="stylesheet" href="hours.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>
+            Razo Real Estate
+        </h1>
+        <h2>
+            Appointment/Contract Tracking
+        </h2>
+    </header>
+    <section class="form">
+        <form id="my-form" method="post" action="https://script.google.com/macros/s/AKfycbz9HmOySxPo_KlHbbz47n_mzpe35pvwhGid890rsLALpR1YCqulhHEL-7zgtgutW0uq8g/exec">
+            <label for="campaign">Campaign</label>
+            <input type="text" name="campaign">
+            <label for="apts_made">Appointments Made</label>
+            <input type="number" name="apts_made" id="appts-made">
+            <label for="apts_kept">Appointments Kept</label>
+            <input type="number" name="apts_kept" id="appts-kept">
+            <label for="contracts">Contracts</label>
+            <input type="number" name="contracts" id="conts">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <script src="hours.js"></script>
+</body>
+</html>
+
